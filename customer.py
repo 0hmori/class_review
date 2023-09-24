@@ -69,11 +69,11 @@ class Customer:
 
     def info_csv(self):
         if self.age < 20:
-            print(self.first_name +" "+ self.family_name, self.age, str(1000))
+            print(self.first_name + " " + self.family_name, self.age, str(1000))
         elif 20 <= self.age < 65:
-            print(self.first_name +" "+ self.family_name, self.age, str(1500))
+            print(self.first_name + " " + self.family_name, self.age, str(1500))
         else:
-            print(self.first_name +" "+ self.family_name, self.age, str(1200))
+            print(self.first_name + " " + self.family_name, self.age, str(1200))
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
