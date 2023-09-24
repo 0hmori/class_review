@@ -103,7 +103,8 @@ class Customer:
         else:
             print(1200)
 
-#確認用
+
+# 確認用
 ken = Customer(first_name="Ken", family_name="Tanaka", age=3)
 ken.entry_fee()
 
@@ -127,7 +128,8 @@ class Customer:
         else:
             print(500)
 
-#確認用
+
+# 確認用
 ken = Customer(first_name="Ken", family_name="Tanaka", age=75)
 ken.entry_fee()
 
@@ -147,4 +149,5 @@ class Customer:
         else:
             print(self.first_name + " " + self.family_name, self.age, str(1200), sep="\t")
 
-#c-8は未完成
+
+# c-8は未完成
