@@ -17,7 +17,7 @@ class Customer:
 
     def info_csv(self):
         entrance_fee = self.entry_fee()
-        print( f"{self.full_name()} , {self.age} , {entrance_fee}")
+        print(f"{self.full_name()} , {self.age} , {entrance_fee}")
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
