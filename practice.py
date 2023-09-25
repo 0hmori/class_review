@@ -21,7 +21,6 @@ class Customer:
         self.first_name = first_name
         self.family_name = family_name
         self.age = age
-        print(str(self.age))
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
@@ -61,19 +60,28 @@ ieyasu.entry_fee()  # 1200 という値を返す
 
 
 # c-4
+# info_csvメソッドで、金額を直接printしていますが、年齢から金額を求めるメソッドを作成し、そのメソッドを使用して金額を算出するように修正お願いします
+# また、カンマ区切りになっていないので、修正お願いします
 class Customer:
     def __init__(self, first_name, family_name, age):
         self.first_name = first_name
         self.family_name = family_name
         self.age = age
 
-    def info_csv(self):
+    def full_name(self):
+        print(self.first_name + " " + self.family_name)
+
+    def entry_fee(self):
         if self.age < 20:
-            print(self.first_name + " " + self.family_name, self.age, str(1000))
+            return 1000
         elif 20 <= self.age < 65:
-            print(self.first_name + " " + self.family_name, self.age, str(1500))
+            return 1500
         else:
-            print(self.first_name + " " + self.family_name, self.age, str(1200))
+            return 1200
+
+    def info_csv(self):
+        fee = self.entry_fee
+        print(f"{self.full_name()}, {self.age}, {fee}")
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
