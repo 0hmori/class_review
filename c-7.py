@@ -16,10 +16,10 @@ class Customer:
         else:
             return 1200
 
-    def info_tub(self):
+    def tab_delimited(self):
         print(f"{self.full_name()}\t {self.age}\t {self.entry_fee()} ")
-        # print(f"{self.full_name()}, {self.age}, {self.entry_fee()}, sep='\t'")
+        # うまくいかなかった→ print(f"{self.full_name()}, {self.age}, {self.entry_fee()}, sep='\t'")
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=75)
-ken.info_tub()
+ken.tab_delimited()
