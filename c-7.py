@@ -5,10 +5,21 @@ class Customer:
         self.family_name = family_name
         self.age = age
 
-    def info_csv(self):
+    def full_name(self):
+        return self.first_name + " " + self.family_name
+
+    def entry_fee(self):
         if self.age < 20:
-            print(self.first_name + " " + self.family_name, self.age, str(1000), sep="\t")
+            return 1000
         elif 20 <= self.age < 65:
-            print(self.first_name + " " + self.family_name, self.age, str(1500), sep="\t")
+            return 1500
         else:
-            print(self.first_name + " " + self.family_name, self.age, str(1200), sep="\t")
+            return 1200
+
+    def info_tub(self):
+        print(f"{self.full_name()}\t {self.age}\t {self.entry_fee()} ")
+        # print(f"{self.full_name()}, {self.age}, {self.entry_fee()}, sep='\t'")
+
+
+ken = Customer(first_name="Ken", family_name="Tanaka", age=75)
+ken.info_tub()
