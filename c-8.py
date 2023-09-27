@@ -17,7 +17,7 @@ class Customer:
             return 1200
 
     def pipe_delimited(self):
-        print(f"{self.full_name()}|{self.age}|{self.entry_fee()} ")
+        print(f"{self.full_name()}|{self.age}|{self.entry_fee()}")
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=75)
