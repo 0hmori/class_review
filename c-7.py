@@ -17,8 +17,12 @@ class Customer:
             return 1200
 
     def tab_delimited(self):
-        print(f"{self.full_name()}\t {self.age}\t {self.entry_fee()} ")
+        print(f"{self.full_name()}\t{self.age}\t{self.entry_fee()}")
+
+        # うまくいった！→ print(self.full_name(), self.age, self.entry_fee(), sep='\t')
         # うまくいかなかった→ print(f"{self.full_name()}, {self.age}, {self.entry_fee()}, sep='\t'")
+        # sep はprint関数で区切り文字を指定できるオプション。
+        # f文字列は使わずに、出力したい変数を指定し、sepを指定！
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=75)
